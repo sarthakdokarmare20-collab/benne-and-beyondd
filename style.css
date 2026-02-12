@@ -1,0 +1,531 @@
+/* ===== RESET ===== */
+body{
+  background:red !important;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Playfair Display", serif;
+}
+
+body{
+  overflow-x:hidden;
+  color:white;
+}
+
+
+/* ===== HEADER ===== */
+
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 50px;
+  background:#145c3c;
+  z-index:999;
+}
+
+.logo{ height:50px; }
+
+nav{
+  display:flex;
+  gap:30px;
+}
+
+
+
+.menu-toggle{
+  display:none;
+  flex-direction:column;
+  cursor:pointer;
+}
+
+.menu-toggle span{
+  width:26px;
+  height:2px;
+  background:white;
+  margin:5px 0;
+}
+
+
+/* ===== HERO SLIDES ===== */
+
+.hero{
+  height:100vh;
+  position:relative;
+  overflow:hidden;
+}
+
+.slideshow{
+  position:absolute;
+  inset:0;
+}
+
+.slide{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transition:opacity 1.2s ease;
+}
+
+.slide.active{ opacity:1; }
+
+
+/* ===== HERO TEXT POSITION — FORCE RIGHT ===== */
+
+.hero-text{
+  position:absolute;
+  right:8%;
+  top:58%;
+  transform:translateY(-50%);
+  z-index:2;
+  text-align:right;
+}
+
+
+/* title */
+
+.brand-title{
+  display:flex;
+  align-items:baseline;
+  gap:14px;
+}
+
+.brand-title .big{
+  font-size:clamp(60px,8vw,110px);
+}
+
+.brand-title .small{
+  font-size:clamp(28px,3.5vw,48px);
+}
+
+
+/* subtitle */
+
+.brand-sub{
+  margin-top:6px;
+  font-size:22px;
+  color:black;
+  font-weight:500;
+  display:inline-flex;
+  align-items:baseline;
+  gap:4px;
+}
+
+
+/* pakwaan line */
+
+.pakwaan{
+  position:relative;
+}
+
+.pakwaan::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:-3px;
+  width:100%;
+  height:2px;
+  background:black;
+}
+
+
+/* ===== CATERING ===== */
+
+.catering{
+  padding:100px 15%;
+  background:#145c3c;
+  text-align:center;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+  .navbar{ padding:14px 20px; }
+
+  nav{
+    position:fixed;
+    right:-100%;
+    top:0;
+    height:100vh;
+    width:70%;
+    background:#145c3c;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    transition:.4s;
+  }
+
+  nav.active{ right:0; }
+
+  .menu-toggle{ display:flex; }
+
+  .hero-text{
+    right:5%;
+    top:60%;
+  }
+
+  .brand-sub{ font-size:18px; }
+}
+/* =========================
+   🔥 FORCE CENTER RESET
+========================= */
+
+.hero-text{
+  position:absolute !important;
+
+  top:50% !important;
+  left:50% !important;
+  right:auto !important;
+
+  transform:translate(-50%,-50%) !important;
+
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+
+  text-align:center !important;
+}
+
+
+/* title center */
+
+.brand-title{
+  display:flex !important;
+  align-items:baseline !important;
+  justify-content:center !important;
+  gap:14px !important;
+}
+
+
+/* subtitle center */
+
+.brand-sub{
+  margin-top:8px !important;
+
+  font-size:22px !important;
+  color:black !important;
+
+  display:flex !important;
+  justify-content:center !important;
+  gap:4px !important;
+}
+
+
+/* pakwaan underline fix */
+
+.pakwaan{
+  position:relative !important;
+}
+
+.pakwaan::before{
+  content:"" !important;
+  position:absolute !important;
+
+  left:0 !important;
+  bottom:100% !important;
+
+  width:100% !important;
+  height:2px !important;
+
+  background:black !important;
+}
+
+
+/* mobile */
+
+@media(max-width:768px){
+
+  .brand-sub{
+    font-size:18px !important;
+  }
+
+}
+/* 🔥 MOBILE HERO TITLE — FINAL */
+
+
+
+/* 🔥 LOGO STYLE STACK — FINAL */
+
+.brand-title{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  line-height:0.9;
+}
+
+/* first row */
+
+.brand-title .line1{
+  display:flex;
+  align-items:baseline;
+  gap:14px;
+}
+
+/* sizes */
+
+.brand-title .big{
+  font-size:clamp(60px,8vw,110px);
+}
+
+.brand-title .small{
+  font-size:clamp(28px,3.5vw,48px);
+}
+
+/* second line spacing */
+
+.brand-title .line2{
+  margin-top:-10px; /* tighten like logo */
+}
+/* 🔥 MOBILE — BIG HERO TEXT */
+
+@media(max-width:768px){
+
+  .brand-title .big{
+    font-size: clamp(56px, 14vw, 90px);
+  }
+
+  .brand-title .small{
+    font-size: clamp(26px, 7vw, 44px);
+  }
+
+  .brand-title{
+    line-height: 0.9;
+  }
+
+}
+/* ===== PREMIUM CINEMATIC SLIDES ===== */
+
+/* ===== HERO SLIDES FIX ===== */
+
+.slide{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  opacity:0;
+
+  transform:scale(1);
+
+  transition:
+    opacity 1.6s ease-in-out,
+    transform 10s ease-out;
+}
+
+/* FIRST SLIDE — instant show */
+
+.slide.active{
+  opacity:1;
+  transform:scale(1.12);
+}
+
+/* 🔥 prevent delay on first paint */
+
+.slide:first-child{
+  opacity:1;
+  transform:scale(1.12);
+}
+
+@media(max-width:768px){
+
+  .slide.active{
+    transform:scale(1.2);
+  }
+
+}
+
+/* ==============================
+   🔥 FORCE PREMIUM SIDE DRAWER
+   ============================== */
+
+/* =========================
+   ✅ MOBILE DRAWER ONLY
+========================= */
+
+@media(max-width:768px){
+
+  nav{
+    position:fixed;
+    top:0;
+    right:-320px;
+
+    width:min(320px,75vw);
+    height:100vh;
+
+    background:rgba(20,92,60,0.75);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+
+    box-shadow:-8px 0 30px rgba(0,0,0,0.3);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+
+    padding:40px 28px;
+    gap:26px;
+
+    transition:right .45s cubic-bezier(.22,1,.36,1);
+
+    z-index:9999;
+  }
+
+  nav.active{
+    right:0;
+  }
+
+  nav a{
+    font-size:22px;
+    width:100%;
+    padding:8px 0;
+    border-bottom:1px solid rgba(255,255,255,0.15);
+  }
+}
+/* ===== PREMIUM DRAWER LINK STYLE — FORCE ===== */
+
+@media(max-width:768px){
+
+  nav a,
+  nav a:visited,
+  nav a:active{
+
+    color:#ffffff !important;
+    text-decoration:none !important;
+
+    font-weight:500;
+    letter-spacing:0.5px;
+
+    transition:opacity .25s ease, transform .25s ease;
+  }
+
+  nav a:hover{
+    opacity:0.7;
+    transform:translateX(4px);
+  }
+
+}
+/* ===== FORCE WHITE NAV LINKS — ALL DEVICES ===== */
+
+nav a,
+nav a:visited,
+nav a:active{
+  color:#ffffff !important;
+  text-decoration:none !important;
+
+  font-weight:500;
+  letter-spacing:0.5px;
+
+  transition:opacity .25s ease, transform .25s ease;
+}
+
+nav a:hover{
+  opacity:0.7;
+  transform:translateX(4px);
+}
+/* ===============================
+   PREMIUM HERO BUTTONS
+=============================== */
+
+.hero-actions{
+  margin-top:24px;
+
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+/* base button */
+
+.cta{
+  position:relative;
+
+  padding:14px 28px;
+  font-size:18px;
+  letter-spacing:0.5px;
+
+  color:white;
+  text-decoration:none;
+
+  border-radius:999px;
+
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+
+  border:1px solid rgba(255,255,255,0.35);
+
+  background:rgba(255,255,255,0.08);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    background .3s ease;
+}
+
+/* primary */
+
+.cta.primary{
+  background:rgba(255,255,255,0.18);
+}
+
+/* hover magic */
+
+.cta:hover{
+  transform:translateY(-3px) scale(1.03);
+
+  background:rgba(255,255,255,0.28);
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.25),
+    inset 0 0 12px rgba(255,255,255,0.3);
+}
+
+/* mobile sizing */
+
+@media(max-width:768px){
+
+  .cta{
+    font-size:16px;
+    padding:12px 22px;
+  }
+
+}
+/* 🔥 HERO BUTTONS — ALWAYS SIDE BY SIDE (PC + PHONE) */
+
+.hero-actions{
+  display:flex !important;
+  flex-direction:row !important;
+  justify-content:center !important;
+  align-items:center !important;
+
+  flex-wrap:nowrap !important;   /* never stack */
+  width:100%;
+  gap:10px !important;
+}
+
+/* buttons auto shrink on small screens */
+
+.hero-actions .cta{
+  flex:1 1 0;
+  min-width:0;
+
+  white-space:nowrap;
+  text-align:center;
+
+  font-size:clamp(13px,4vw,18px);
+  padding:12px 10px;
+}
